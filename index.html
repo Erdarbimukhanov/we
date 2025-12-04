@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Расписание Әлмахан Доскелді</title>
+    <style>
+        :root{
+            --bg1: #1f1c2c;
+            --bg2: #928dab;
+            --card-bg: rgba(0,0,255,0.12);
+            --accent: rgba(0,0,243,0.18);
+            --glass: rgba(0,0,25,0.08);
+        }
+
+        *{box-sizing:border-box}
+        body {
+            margin: 0;
+            font-family: "Arial", sans-serif;
+            background: linear-gradient(135deg, var(--bg1), var(--bg2));
+            color: #fff;
+            -webkit-font-smoothing:antialiased;
+            -moz-osx-font-smoothing:grayscale;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 40px auto;
+            padding: 24px;
+        }
+
+        .profile-card {
+            background: linear-gradient(180deg, var(--card-bg), rgba(255,255,255,0.06));
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+            margin-bottom: 30px;
+            backdrop-filter: blur(6px);
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .avatar {
+            width: 140px;
+            height: 140px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: inline-block;
+            flex: 0 0 140px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.35), inset 0 -6px 12px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight:700;
+            font-size:20px;
+            color: #fff;
+        }
+
+        .profile-info {
+            min-width: 220px;
+            text-align: left;
+            color: #fff;
+        }
+
+        .profile-info h1{
+            margin: 0 0 6px 0;
+            font-size: 1.6rem;
+            letter-spacing: 0.2px;
+        }
+
+        .profile-info p{
+            margin: 6px 0;
+            font-size: 0.98rem;
+            opacity: 0.95;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 18px 0 12px;
+            font-weight: 600;
+        }
+
+        .day {
+            margin-bottom: 20px;
+        }
+
+        .day h3{
+            margin: 0 0 8px 0;
+            font-size: 1.05rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--glass);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+        }
+
+        thead th{
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+            background: linear-gradient(90deg, rgba(0,0,255,0.06), rgba(0,0,255,0.03));
+        }
+
+        tbody td {
+            padding: 12px 16px;
+            border-top: 1px solid rgba(0,0,255,0.02);
+        }
+
+        tbody tr:nth-child(even){
+            background: rgba(0,0,255,0.02);
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        a.back {
+            display:inline-block;
+            margin: 14px auto 0;
+            text-decoration:none;
+            color: #fff;
+            background: rgba(0,0,0,0.18);
+            padding: 10px 16px;
+            border-radius: 10px;
+            transition: transform .18s ease, background .18s ease;
+        }
+        a.back:hover{ transform: translateY(-3px); background: rgba(0,0,0,0.3) }
+
+        @media (max-width:700px){
+            .profile-card{ padding:18px; gap:12px }
+            .avatar{ width:110px; height:110px; flex:0 0 110px }
+            .profile-info{ text-align:center; min-width:0 }
+            thead th, tbody td{ padding:10px 12px }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-card">
+            <div class="avatar">Ә</div>
+            <div class="profile-info">
+                <h1>Әлмахан Доскелді</h1>
+                <p>📧 doskeldialmakhan@gmail.com</p>
+                <p>📱 87475470607</p>
+                <p>🎓 18 лет, учусь в КазГАСА</p>
+            </div>
+        </div>
+
+        <h2>Расписание занятий</h2>
+
+        <!-- Понедельник -->
+        <div class="day">
+            <h3>Понедельник</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Пара</th>
+                        <th>Предмет</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>История</td></tr>
+                    <tr><td>2</td><td>Физика</td></tr>
+                    <tr><td>3</td><td>КСТ</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Вторник -->
+        <div class="day">
+            <h3>Вторник</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Пара</th>
+                        <th>Предмет</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>История</td></tr>
+                    <tr><td>2</td><td>Физика</td></tr>
+                    <tr><td>3</td><td>КСТ</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Среда -->
+        <div class="day">
+            <h3>Среда</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Пара</th>
+                        <th>Предмет</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>История</td></tr>
+                    <tr><td>2</td><td>Физика</td></tr>
+                    <tr><td>3</td><td>КСТ</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Четверг -->
+        <div class="day">
+            <h3>Четверг</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Пара</th>
+                        <th>Предмет</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>История</td></tr>
+                    <tr><td>2</td><td>Физика</td></tr>
+                    <tr><td>3</td><td>КСТ</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Пятница -->
+        <div class="day">
+            <h3>Пятница</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Пара</th>
+                        <th>Предмет</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>История</td></tr>
+                    <tr><td>2</td><td>Физика</td></tr>
+                    <tr><td>3</td><td>КСТ</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="center">
+            <a class="back" href="index.html">← Назад</a>
+        </p>
+    </div>
+</body>
+</html>
